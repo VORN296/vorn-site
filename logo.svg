@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <radialGradient id="eyeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#00d4b4;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#00d4b4;stop-opacity:0" />
+    </radialGradient>
+    <filter id="softGlow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="400" fill="#0a0a0f"/>
+  
+  <!-- Hexagon outline -->
+  <polygon points="200,60 320,130 320,270 200,340 80,270 80,130" 
+           fill="none" 
+           stroke="#3a4a6b" 
+           stroke-width="3"/>
+  
+  <!-- Eye glow (background) -->
+  <ellipse cx="200" cy="200" rx="45" ry="35" fill="url(#eyeGlow)" filter="url(#softGlow)"/>
+  
+  <!-- Eye slit (vertical, asymmetric) -->
+  <ellipse cx="200" cy="200" rx="5" ry="30" fill="#00f5d4" 
+           transform="translate(0, 0)" opacity="1"/>
+  
+  <!-- Slight asymmetry: offset left edge up -->
+  <path d="M 195 170 Q 195 165 200 165 Q 205 165 205 170 L 205 230 Q 205 235 200 235 Q 195 235 195 230 Z" 
+        fill="#00f5d4"/>
+  
+</svg>
